@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'git@github.com:bkrraj/spring-pet-clinic.git'
+        git branch: 'main', url: 'git@github.com:bkrraj/ncplspringboot.git'
       }
     }
  stage('Pull Changes') {
