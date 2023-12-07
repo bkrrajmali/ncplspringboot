@@ -14,21 +14,21 @@ pipeline {
       }
       }
 
-// stage ('Build') {
-//           steps {
+stage ('Build') {
+          steps {
 
-//             sh '/opt/apache-maven-3.9.6/bin/mvn clean install'    
+            sh 'mvn clean install'    
 
-//             }
-//       }
+            }
+      }
 
-//    stage('Unit Test') {
-//       steps {
-//         echo '<--------------- Unit Testing started  --------------->'
-//         sh '/opt/apache-maven-3.9.6/bin/mvn surefire-report:report'
-//         echo '<------------- Unit Testing stopped  --------------->'
-//       }
-//     }
+   stage('Unit Test') {
+      steps {
+        echo '<--------------- Unit Testing started  --------------->'
+        sh 'mvn surefire-report:report'
+        echo '<------------- Unit Testing stopped  --------------->'
+      }
+    }
 
 
 // stage('Sonar Analysis') {
