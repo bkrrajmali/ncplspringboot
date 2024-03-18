@@ -1,4 +1,4 @@
-def registry = 'https://bkrraj.jfrog.io'
+def registry = 'https://bala1.jfrog.io'
 pipeline {
   agent any
   stages {
@@ -66,7 +66,7 @@ stage("Jar Publish") {
                               "files": [
                                 {
                                   "pattern": "target/springbootApp.jar",
-                                  "target": "maven-libs-release/{1}",
+                                  "target": "maven-libs-release-local",
                                   "flat": "false",
                                   "props" : "${properties}",
                                   "exclusions": [ "*.sha1", "*.md5"]
